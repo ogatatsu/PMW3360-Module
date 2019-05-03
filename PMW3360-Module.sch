@@ -1,0 +1,415 @@
+EESchema Schematic File Version 4
+LIBS:PMW3360-Module-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "PMW3360-Module"
+Date "2019-03-24"
+Rev "1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L PMW3360-T2QU:PMW3360-T2QU U1
+U 1 1 5C7F769F
+P 4700 5000
+F 0 "U1" H 4700 5615 50  0000 C CNN
+F 1 "PMW3360-T2QU" H 4700 5524 50  0000 C CNN
+F 2 "Footprints:PMW3360-T2QU" H 4450 5000 50  0001 C CNN
+F 3 "" H 4450 5000 50  0001 C CNN
+	1    4700 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5C7F7731
+P 2900 5100
+F 0 "C1" H 3015 5146 50  0000 L CNN
+F 1 "4.7uF" H 3015 5055 50  0000 L CNN
+F 2 "Footprints:1608" H 2938 4950 50  0001 C CNN
+F 3 "" H 2900 5100 50  0001 C CNN
+	1    2900 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5C7F77BF
+P 3350 5100
+F 0 "C2" H 3465 5146 50  0000 L CNN
+F 1 "0.1uF" H 3465 5055 50  0000 L CNN
+F 2 "Footprints:1608" H 3388 4950 50  0001 C CNN
+F 3 "" H 3350 5100 50  0001 C CNN
+	1    3350 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5C7F7894
+P 5900 4300
+F 0 "R2" H 5970 4346 50  0000 L CNN
+F 1 "10K" H 5970 4255 50  0000 L CNN
+F 2 "Footprints:1608" V 5830 4300 50  0001 C CNN
+F 3 "" H 5900 4300 50  0001 C CNN
+	1    5900 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J1
+U 1 1 5C7F7961
+P 8200 4150
+F 0 "J1" H 8280 4192 50  0000 L CNN
+F 1 "VI" H 8280 4101 50  0000 L CNN
+F 2 "Footprints:Wirepad" H 8200 4150 50  0001 C CNN
+F 3 "" H 8200 4150 50  0001 C CNN
+	1    8200 4150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4100 4650
+NoConn ~ 4100 4750
+NoConn ~ 4100 5150
+NoConn ~ 5300 4850
+NoConn ~ 5300 4650
+Wire Wire Line
+	2900 4850 2900 4950
+Wire Wire Line
+	3350 4950 3350 4850
+Wire Wire Line
+	2900 4850 3350 4850
+Connection ~ 3350 4850
+Wire Wire Line
+	3350 4850 4100 4850
+Wire Wire Line
+	3350 5250 3350 5350
+Wire Wire Line
+	3350 5350 2900 5350
+Wire Wire Line
+	2900 5350 2900 5250
+Wire Wire Line
+	2900 5350 2900 5500
+Connection ~ 2900 5350
+Text GLabel 2900 5500 3    50   Input ~ 0
+GND
+$Comp
+L Device:R R1
+U 1 1 5C7F7F2E
+P 5600 4300
+F 0 "R1" H 5670 4346 50  0000 L CNN
+F 1 "39R" H 5670 4255 50  0000 L CNN
+F 2 "Footprints:1608" V 5530 4300 50  0001 C CNN
+F 3 "" H 5600 4300 50  0001 C CNN
+	1    5600 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 4750 5600 4750
+Wire Wire Line
+	5600 4750 5600 4450
+Text GLabel 4000 5350 0    50   Input ~ 0
+GND
+Wire Wire Line
+	4100 5350 4000 5350
+Text GLabel 5400 5350 2    50   Input ~ 0
+MOTION
+Text GLabel 5400 5250 2    50   Input ~ 0
+SCLK
+Text GLabel 5400 5150 2    50   Input ~ 0
+MOSI
+Text GLabel 6000 5050 2    50   Input ~ 0
+MISO
+Text GLabel 5400 4950 2    50   Input ~ 0
+NCS
+Wire Wire Line
+	5400 5150 5300 5150
+Wire Wire Line
+	5300 5250 5400 5250
+Wire Wire Line
+	5400 5350 5300 5350
+Wire Wire Line
+	5400 4950 5300 4950
+Text GLabel 5600 4000 1    50   Input ~ 0
+V1.9
+Wire Wire Line
+	5900 4150 5900 4000
+Text GLabel 4000 4950 0    50   Input ~ 0
+V1.9
+Text GLabel 4000 5050 0    50   Input ~ 0
+V3.3
+Text GLabel 4000 5250 0    50   Input ~ 0
+RESET
+Wire Wire Line
+	4100 5250 4000 5250
+Wire Wire Line
+	4100 5050 4000 5050
+Wire Wire Line
+	4100 4950 4000 4950
+$Comp
+L Regulator_Linear:TLV70019_SOT23-5 U2
+U 1 1 5C91AED8
+P 4800 2200
+F 0 "U2" H 4800 2542 50  0000 C CNN
+F 1 "SOT23-5_1.9V_Voltage_Regulator" H 4800 2451 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 4800 2525 50  0001 C CIN
+F 3 "" H 4800 2250 50  0001 C CNN
+	1    4800 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 5C91B2E8
+P 5450 2250
+F 0 "C5" H 5565 2296 50  0000 L CNN
+F 1 "0.1uF" H 5565 2205 50  0000 L CNN
+F 2 "Footprints:1608" H 5488 2100 50  0001 C CNN
+F 3 "" H 5450 2250 50  0001 C CNN
+	1    5450 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 5C91B352
+P 5950 2250
+F 0 "C6" H 6065 2296 50  0000 L CNN
+F 1 "10uF" H 6065 2205 50  0000 L CNN
+F 2 "Footprints:1608" H 5988 2100 50  0001 C CNN
+F 3 "" H 5950 2250 50  0001 C CNN
+	1    5950 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 5C91B3A0
+P 4150 2250
+F 0 "C4" H 4265 2296 50  0000 L CNN
+F 1 "0.1uF" H 4265 2205 50  0000 L CNN
+F 2 "Footprints:1608" H 4188 2100 50  0001 C CNN
+F 3 "" H 4150 2250 50  0001 C CNN
+	1    4150 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5C91B3FE
+P 3650 2250
+F 0 "C3" H 3765 2296 50  0000 L CNN
+F 1 "10uF" H 3765 2205 50  0000 L CNN
+F 2 "Footprints:1608" H 3688 2100 50  0001 C CNN
+F 3 "" H 3650 2250 50  0001 C CNN
+	1    3650 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 2100 5450 2100
+Connection ~ 5450 2100
+Wire Wire Line
+	5450 2100 5100 2100
+Wire Wire Line
+	4500 2100 4450 2100
+Connection ~ 4150 2100
+Wire Wire Line
+	4150 2100 3650 2100
+Wire Wire Line
+	4500 2200 4450 2200
+Wire Wire Line
+	4450 2200 4450 2100
+Connection ~ 4450 2100
+Wire Wire Line
+	4450 2100 4150 2100
+Text GLabel 5950 2600 3    50   Input ~ 0
+GND
+Text GLabel 5450 2600 3    50   Input ~ 0
+GND
+Text GLabel 4800 2600 3    50   Input ~ 0
+GND
+Text GLabel 4150 2600 3    50   Input ~ 0
+GND
+Text GLabel 3650 2600 3    50   Input ~ 0
+GND
+Wire Wire Line
+	4800 2500 4800 2600
+Wire Wire Line
+	5950 2400 5950 2600
+Wire Wire Line
+	5450 2400 5450 2600
+Wire Wire Line
+	4150 2400 4150 2600
+Wire Wire Line
+	3650 2400 3650 2600
+Text GLabel 3350 2100 0    50   Input ~ 0
+V3.3
+Wire Wire Line
+	3650 2100 3350 2100
+Connection ~ 3650 2100
+Text GLabel 6250 2100 2    50   Input ~ 0
+V1.9
+Wire Wire Line
+	6250 2100 5950 2100
+Connection ~ 5950 2100
+Wire Wire Line
+	5600 4000 5600 4150
+Text GLabel 5900 4000 1    50   Input ~ 0
+V3.3
+$Comp
+L Jumper:SolderJumper_2_Bridged JP1
+U 1 1 5C921932
+P 5900 4700
+F 0 "JP1" V 5854 4768 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" V 5945 4768 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 5900 4700 50  0001 C CNN
+F 3 "~" H 5900 4700 50  0001 C CNN
+	1    5900 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5300 5050 5900 5050
+Wire Wire Line
+	5900 4450 5900 4550
+Wire Wire Line
+	5900 4850 5900 5050
+Connection ~ 5900 5050
+Wire Wire Line
+	5900 5050 6000 5050
+Text GLabel 7900 4150 0    50   Input ~ 0
+V3.3
+Wire Wire Line
+	8000 4150 7900 4150
+Text GLabel 7900 4350 0    50   Input ~ 0
+GND
+$Comp
+L Connector_Generic:Conn_01x01 J2
+U 1 1 5C924906
+P 8200 4350
+F 0 "J2" H 8280 4392 50  0000 L CNN
+F 1 "GN" H 8280 4301 50  0000 L CNN
+F 2 "Footprints:Wirepad" H 8200 4350 50  0001 C CNN
+F 3 "" H 8200 4350 50  0001 C CNN
+	1    8200 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 4350 7900 4350
+Text GLabel 7900 4550 0    50   Input ~ 0
+RESET
+$Comp
+L Connector_Generic:Conn_01x01 J3
+U 1 1 5C925000
+P 8200 4550
+F 0 "J3" H 8280 4592 50  0000 L CNN
+F 1 "RS" H 8280 4501 50  0000 L CNN
+F 2 "Footprints:Wirepad" H 8200 4550 50  0001 C CNN
+F 3 "" H 8200 4550 50  0001 C CNN
+	1    8200 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 4550 7900 4550
+$Comp
+L Connector_Generic:Conn_01x01 J4
+U 1 1 5C92567C
+P 8200 4750
+F 0 "J4" H 8280 4792 50  0000 L CNN
+F 1 "MO" H 8280 4701 50  0000 L CNN
+F 2 "Footprints:Wirepad" H 8200 4750 50  0001 C CNN
+F 3 "" H 8200 4750 50  0001 C CNN
+	1    8200 4750
+	1    0    0    -1  
+$EndComp
+Text GLabel 7900 4750 0    50   Input ~ 0
+MOSI
+Wire Wire Line
+	8000 4750 7900 4750
+Text GLabel 7900 4950 0    50   Input ~ 0
+MISO
+$Comp
+L Connector_Generic:Conn_01x01 J5
+U 1 1 5C926191
+P 8200 4950
+F 0 "J5" H 8280 4992 50  0000 L CNN
+F 1 "MI" H 8280 4901 50  0000 L CNN
+F 2 "Footprints:Wirepad" H 8200 4950 50  0001 C CNN
+F 3 "" H 8200 4950 50  0001 C CNN
+	1    8200 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 4950 7900 4950
+Text GLabel 7900 5150 0    50   Input ~ 0
+SCLK
+$Comp
+L Connector_Generic:Conn_01x01 J6
+U 1 1 5C927105
+P 8200 5150
+F 0 "J6" H 8280 5192 50  0000 L CNN
+F 1 "SC" H 8280 5101 50  0000 L CNN
+F 2 "Footprints:Wirepad" H 8200 5150 50  0001 C CNN
+F 3 "" H 8200 5150 50  0001 C CNN
+	1    8200 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 5150 7900 5150
+Text GLabel 7900 5350 0    50   Input ~ 0
+NCS
+$Comp
+L Connector_Generic:Conn_01x01 J7
+U 1 1 5C9278BE
+P 8200 5350
+F 0 "J7" H 8280 5392 50  0000 L CNN
+F 1 "SS" H 8280 5301 50  0000 L CNN
+F 2 "Footprints:Wirepad" H 8200 5350 50  0001 C CNN
+F 3 "" H 8200 5350 50  0001 C CNN
+	1    8200 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 5350 7900 5350
+Text GLabel 7900 5550 0    50   Input ~ 0
+MOTION
+$Comp
+L Connector_Generic:Conn_01x01 J8
+U 1 1 5C9280CE
+P 8200 5550
+F 0 "J8" H 8280 5592 50  0000 L CNN
+F 1 "MT" H 8280 5501 50  0000 L CNN
+F 2 "Footprints:Wirepad" H 8200 5550 50  0001 C CNN
+F 3 "" H 8200 5550 50  0001 C CNN
+	1    8200 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 5550 7900 5550
+Text GLabel 7900 2000 1    50   Input ~ 0
+V3.3
+Text GLabel 8400 2000 1    50   Input ~ 0
+GND
+Wire Wire Line
+	8400 2000 8400 2100
+Wire Wire Line
+	7900 2000 7900 2100
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5C92C00E
+P 7900 2100
+F 0 "#FLG0101" H 7900 2175 50  0001 C CNN
+F 1 "PWR_FLAG" H 7900 2273 50  0000 C CNN
+F 2 "" H 7900 2100 50  0001 C CNN
+F 3 "~" H 7900 2100 50  0001 C CNN
+	1    7900 2100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5C92E310
+P 8400 2100
+F 0 "#FLG0102" H 8400 2175 50  0001 C CNN
+F 1 "PWR_FLAG" H 8400 2273 50  0000 C CNN
+F 2 "" H 8400 2100 50  0001 C CNN
+F 3 "~" H 8400 2100 50  0001 C CNN
+	1    8400 2100
+	-1   0    0    1   
+$EndComp
+$EndSCHEMATC
